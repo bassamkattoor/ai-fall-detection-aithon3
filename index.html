@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fall Detection System - AITHON 3.0</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(45, 45, 45, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #00ff88;
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+        
+        .header p {
+            color: #cccccc;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .demo-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #333;
+        }
+        
+        .demo-section h2 {
+            color: #00ff88;
+            margin-top: 0;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            background: linear-gradient(45deg, #00ff88, #00cc66);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(45deg, #00cc66, #00aa44);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #666, #888);
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(45deg, #888, #aaa);
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            font-size: 1.1em;
+        }
+        
+        .feature-list li:before {
+            content: "✅ ";
+            color: #00ff88;
+            font-weight: bold;
+        }
+        
+        .status-display {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: 2px solid #00ff88;
+            color: #00ff88;
+        }
+        
+        .info-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #333;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+        
+        @media (max-width: 768px) {
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚨 AI Fall Detection System</h1>
+            <p>AITHON 3.0 | IEEE Student Branch | College of Engineering Karungappally</p>
+        </div>
+        
+        <div class="status-display">
+            ✅ System Status: Online and Ready for Demo
+        </div>
+        
+        <div class="demo-section">
+            <h2>🎯 Live Demo Options</h2>
+            <p>Choose how you want to experience the AI Fall Detection System:</p>
+            
+            <div class="button-group">
+                <a href="https://share.streamlit.io/bassamkattoor/ai-fall-detection-aithon3/main/streamlit_app.py" class="btn" target="_blank">
+                    🌐 Streamlit Cloud Demo
+                </a>
+                <a href="https://github.com/bassamkattoor/ai-fall-detection-aithon3" class="btn btn-secondary" target="_blank">
+                    📁 View Source Code
+                </a>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🧪 Local Demo</h2>
+            <p>Run the system locally on your computer:</p>
+            
+            <div class="button-group">
+                <a href="https://github.com/bassamkattoor/ai-fall-detection-aithon3/raw/main/run_demo.bat" class="btn" download>
+                    💻 Download Demo Version
+                </a>
+                <a href="https://github.com/bassamkattoor/ai-fall-detection-aithon3/raw/main/run_advanced_system.bat" class="btn btn-secondary" download>
+                    🤖 Download Full System
+                </a>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h2>ℹ️ System Features</h2>
+            <ul class="feature-list">
+                <li>Real-time pose estimation using MediaPipe</li>
+                <li>AI-powered fall detection with TensorFlow</li>
+                <li>Live camera feed with pose overlay</li>
+                <li>Health monitoring simulation</li>
+                <li>Voice interaction system</li>
+                <li>Alert management system</li>
+                <li>Dark-themed professional UI</li>
+                <li>Multi-platform deployment ready</li>
+            </ul>
+        </div>
+        
+        <div class="info-section">
+            <h2>🏆 Hackathon Ready</h2>
+            <p>This system implements all requirements from AITHON 3.0:</p>
+            <ul class="feature-list">
+                <li>Computer Vision with pose estimation</li>
+                <li>AI Model Development for fall detection</li>
+                <li>Real-Time Integration and processing</li>
+                <li>Voice Interaction System</li>
+                <li>User Interface with health monitoring</li>
+                <li>Alert System and external notifications</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>AI Fall Detection System | AITHON 3.0 | IEEE Student Branch</p>
+            <p>Built with OpenCV, MediaPipe, TensorFlow, and AI Technology</p>
+            <p>Repository: <a href="https://github.com/bassamkattoor/ai-fall-detection-aithon3" style="color: #00ff88;">github.com/bassamkattoor/ai-fall-detection-aithon3</a></p>
+        </div>
+    </div>
+</body>
+</html>
