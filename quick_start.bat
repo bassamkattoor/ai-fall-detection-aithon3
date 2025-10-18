@@ -10,6 +10,6 @@ echo Installation complete!
 echo.
 echo Starting the AI Fall Detection System...
 echo.
-python simple_fall_detection.py
+python working_fall_detection.py
 
 pause
